@@ -1,0 +1,29 @@
+.navbarBackground{
+    background-color: #ffc95c;
+}
+
+@media screen and (max-width: 576px) {
+    .nav-link{
+        font-weight: 600;
+    }
+    .navbar-brand{
+        font-weight: 700;
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    .navbarContent{
+        display: flex;
+        justify-content: end;
+    }
+    .navbarContainer {
+        margin-left: 4rem;
+        margin-right: 3rem;
+    }
+    .navbar-brand{
+        font-size: 1.4rem;
+    }
+    .nav-link{
+        font-weight: 600;
+    }
+}
