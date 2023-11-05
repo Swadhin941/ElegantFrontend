@@ -4,6 +4,74 @@
     width: 100%;
 }
 
+@media screen and (max-width: 576px) {
+    .topBannerContent{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .topBannerImgDiv{
+        display: flex;
+        justify-content: center;
+        margin-top: 1.8rem;
+    }
+    .topBannerTextDiv{
+        width: 250px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1.8rem;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 766px) {
+    .topBannerContent{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .topBannerImgDiv{
+        display: flex;
+        justify-content: center;
+        margin-top: 1.8rem;
+    }
+    .topBannerTextDiv{
+        width: 250px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1.8rem;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 991px) {
+    .topBannerContent{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .topBannerTextDiv{
+        width: 280px;
+    }
+    .topBannerContent .topBannerTextDiv{
+        margin-top: auto;
+        margin-bottom: auto;
+
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .topBannerContent{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .topBannerTextDiv{
+        width: 280px;
+    }
+    .topBannerContent .topBannerTextDiv{
+        margin-top: auto;
+        margin-bottom: auto;
+
+    }
+}
+
 @media screen and (min-width: 1201px) {
     .topBannerContent{
         display: flex;

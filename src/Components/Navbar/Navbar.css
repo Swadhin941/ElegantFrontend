@@ -11,6 +11,41 @@
     }
 }
 
+@media (min-width: 577px) and (max-width: 766px) {
+    .nav-link{
+        font-weight: 600;
+    }
+    .navbar-brand{
+        font-weight: 700;
+    }
+}
+
+@media (min-width:767px) and (max-width: 991px) {
+    .nav-link{
+        font-weight: 600;
+    }
+    .navbar-brand{
+        font-weight: 700;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .navbarContent{
+        display: flex;
+        justify-content: end;
+    }
+    .navbarContainer {
+        margin-left: 4rem;
+        margin-right: 3rem;
+    }
+    .navbar-brand{
+        font-size: 1.4rem;
+    }
+    .nav-link{
+        font-weight: 600;
+    }
+}
+
 @media screen and (min-width: 1201px) {
     .navbarContent{
         display: flex;
