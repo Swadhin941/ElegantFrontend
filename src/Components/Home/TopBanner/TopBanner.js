@@ -11,6 +11,9 @@ const TopBanner = () => {
                 <div className="topBannerTextDiv">
                     <h1 className='mb-0' style={{fontWeight:"700"}}>Listen to the amazing music sound</h1>
                     <p className='mt-0' style={{fontWeight:"600"}}><small>Experience music like never before</small></p>
+                    <div>
+                        <button className='btn btn-dark w-75'>Shopping Now</button>
+                    </div>
                 </div>
             </div>
         </div>
