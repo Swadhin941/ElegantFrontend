@@ -1,0 +1,20 @@
+.topBanner{
+    background-image: linear-gradient(to right, #febd4a,#ffc95c, #fecb5e);
+    height: auto;
+    width: 100%;
+}
+
+@media screen and (min-width: 1201px) {
+    .topBannerContent{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .topBannerTextDiv{
+        width: 280px;
+    }
+    .topBannerContent .topBannerTextDiv{
+        margin-top: auto;
+        margin-bottom: auto;
+
+    }
+}
