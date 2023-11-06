@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../Navbar/Navbar';
 import { Outlet } from 'react-router-dom';
+import Footer from '../Footer/Footer';
 
 const Main = () => {
     return (
@@ -11,6 +12,9 @@ const Main = () => {
                 </div>
                 <div className="col-12 col-md-12 col-lg-12">
                     <Outlet></Outlet>
+                </div>
+                <div className="col-12 col-md-12 col-lg-12">
+                    <Footer></Footer>
                 </div>
             </div>
         </div>

@@ -1,0 +1,21 @@
+@media screen and (min-width: 1201px) {
+    .footerContainer{
+        background-color: black;
+        padding-left: 6rem;
+        padding-right: 6rem;
+        padding-top: 3rem;
+    }
+    .footerFirstContent{
+        display: flex;
+        justify-content: space-between;
+    }
+    .footerNavContent a{
+        margin: 10px;
+        text-decoration: none;
+        color: white;
+        font-weight: 600;
+    }
+    .socialConnect i{
+        margin: 7px;
+    }
+}

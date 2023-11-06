@@ -18,11 +18,8 @@ const Navbar = () => {
                             <NavLink to={'/'} className={'nav-link'}>Home</NavLink>
                         </li>                    
                         <li className="nav-item">
-                            <NavLink to={'/'} className={'nav-link'}>Home</NavLink>
-                        </li>                    
-                        <li className="nav-item">
-                            <NavLink to={'/'} className={'nav-link'}>Home</NavLink>
-                        </li>                    
+                            <NavLink to={'/login'} className={'nav-link'} style={{marginTop:"-0.23rem"}}><i className='bi bi-person-circle fs-4' ></i></NavLink>
+                        </li>                                      
                     </ul>
                 </div>
             </div>
