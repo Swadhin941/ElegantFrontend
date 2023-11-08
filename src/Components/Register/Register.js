@@ -4,7 +4,7 @@ import useTitle from '../CustomHook/useTitle/useTitle';
 import { Link } from 'react-router-dom';
 
 const Register = () => {
-    useTitle("3legant- Login");
+    useTitle("3legant- Register");
     const [showPassword, setShowPassword] = useState(false);
     return (
         <div className='container-fluid loginContainer'>
