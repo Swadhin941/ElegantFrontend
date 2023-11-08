@@ -19,13 +19,13 @@ const Login = () => {
                             <div>
                                 <label htmlFor="email" className='form-label'>Email:</label>
                                 <div className='input-group'>
-                                    <input type="email" name='email' className='form-control'/>
+                                    <input type="email" name='email' className='form-control' required />
                                 </div>
                             </div>
                             <div className='mt-2'>
                                 <label htmlFor="password" className='form-label'>Password:</label>
                                 <div className="input-group">
-                                    <input type={showPassword?"text":"password"} className='form-control' name='password' style={{borderRight:"0px"}} />
+                                    <input type={showPassword?"text":"password"} className='form-control' name='password' style={{borderRight:"0px"}} required />
                                     <span className='input-group-text' onClick={()=>setShowPassword(!showPassword)} style={{backgroundColor: "white"}}><i className={showPassword? "bi bi-eye":'bi bi-eye-slash'}></i></span>
                                 </div>
                             </div>
