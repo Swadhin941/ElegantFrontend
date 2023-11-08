@@ -21,7 +21,20 @@ const Footer = () => {
                 <div className="col-12 col-md-12 col-lg-12">
                     <div className='footerFirstContent'>
                         <div>
-                            <Link to={'/'} className='navbar-brand text-white me-2'>3legant</Link> | <span className='d-inline-block ms-2 text-white'>Headphone Store</span>
+                            <div className="footerTextDiv">
+                                <div>
+                                    <Link to={'/'} className='footerIcon'>3legant</Link>
+                                </div>
+                                <div>
+                                    <div className='horizontalHighFen'>
+                                    </div>
+                                    <div className='verticalHighFen'>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>Headphone Store</p>
+                                </div>
+                            </div>
                         </div>
                         <div className='footerNavContent'>
                             <Link to={'/'}>Home</Link>
@@ -33,7 +46,7 @@ const Footer = () => {
                     <hr className='w-100 text-white' />
                 </div>
                 <div className="col-12 col-md-12 col-lg-12">
-                    <div className='d-flex justify-content-between'>
+                    <div className='footerIconContent'>
                         <div>
                             <p className='text-white'>Copyright <i className="bi bi-c-circle" style={{fontSize:"12px"}}></i> {new Date().getFullYear()} 3legant. <small>All right reserved</small></p>
                         </div>

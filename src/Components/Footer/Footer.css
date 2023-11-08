@@ -1,21 +1,411 @@
-@media screen and (min-width: 1201px) {
-    .footerContainer{
+@media screen and (max-width: 576px) {
+    .footerContainer {
         background-color: black;
         padding-left: 6rem;
         padding-right: 6rem;
         padding-top: 3rem;
     }
-    .footerFirstContent{
+
+    .footerFirstContent {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .footerIcon {
+        color: white;
+        text-decoration: none;
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+
+    .footerIcon:hover {
+        color: white;
+    }
+
+    .footerNavContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -5px;
+    }
+
+    .footerNavContent a {
+        text-decoration: none;
+        color: white;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    .socialConnect i {
+        margin: 7px;
+    }
+
+    .footerTextDiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footerTextDiv div {
+        margin: 5px;
+    }
+
+    .footerTextDiv div p {
+        color: white;
+        text-align: center;
+        margin-top: -2px;
+    }
+
+    .horizontalHighFen {
+        color: white;
+        border: 2px solid white;
+        height: 0px;
+        width: 1.8rem;
+        border-radius: 5px;
+    }
+
+    .verticalHighFen {
+        display: none;
+    }
+
+    .footerIconContent {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .footerIconContent div {
+        margin: 5px;
+    }
+
+    .footerIconContent div p {
+        font-size: 8px;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 766px) {
+    .footerContainer {
+        background-color: black;
+        padding-left: 6rem;
+        padding-right: 6rem;
+        padding-top: 3rem;
+    }
+
+    .footerFirstContent {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .footerIcon {
+        color: white;
+        text-decoration: none;
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+
+    .footerIcon:hover {
+        color: white;
+    }
+
+    .footerNavContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -5px;
+    }
+
+    .footerNavContent a {
+        text-decoration: none;
+        color: white;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    .socialConnect i {
+        margin: 7px;
+    }
+
+    .footerTextDiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footerTextDiv div {
+        margin: 5px;
+    }
+
+    .footerTextDiv div p {
+        color: white;
+        text-align: center;
+        margin-top: -2px;
+    }
+
+    .horizontalHighFen {
+        color: white;
+        border: 2px solid white;
+        height: 0px;
+        width: 1.8rem;
+        border-radius: 5px;
+    }
+
+    .verticalHighFen {
+        display: none;
+    }
+
+    .footerIconContent {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .footerIconContent div {
+        margin: 5px;
+    }
+
+    .footerIconContent div p {
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 991px) {
+    .footerContainer {
+        background-color: black;
+        padding-left: 6rem;
+        padding-right: 6rem;
+        padding-top: 3rem;
+    }
+
+    .footerFirstContent {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .footerIcon {
+        color: white;
+        text-decoration: none;
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+
+    .footerIcon:hover {
+        color: white;
+    }
+
+    .footerNavContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -5px;
+    }
+
+    .footerNavContent a {
+        text-decoration: none;
+        color: white;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    .socialConnect i {
+        margin: 7px;
+    }
+
+    .footerTextDiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footerTextDiv div {
+        margin: 5px;
+    }
+
+    .footerTextDiv div p {
+        color: white;
+        text-align: center;
+        margin-top: -2px;
+    }
+
+    .horizontalHighFen {
+        color: white;
+        border: 2px solid white;
+        height: 0px;
+        width: 1.8rem;
+        border-radius: 5px;
+    }
+
+    .verticalHighFen {
+        display: none;
+    }
+
+    .footerIconContent {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .footerIconContent div {
+        margin: 5px;
+    }
+
+    .footerIconContent div p {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .footerContainer {
+        background-color: black;
+        padding-left: 6rem;
+        padding-right: 6rem;
+        padding-top: 3rem;
+    }
+
+    .footerFirstContent {
         display: flex;
         justify-content: space-between;
     }
-    .footerNavContent a{
+
+    .footerNavContent a {
         margin: 10px;
         text-decoration: none;
         color: white;
         font-weight: 600;
     }
-    .socialConnect i{
+
+    .socialConnect i {
         margin: 7px;
+    }
+
+    .footerTextDiv {
+        display: flex;
+    }
+
+    .footerTextDiv div {
+        margin: 5px;
+    }
+
+    .footerIcon {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.6rem;
+    }
+
+    .footerIcon:hover {
+        color: white;
+    }
+
+    .horizontalHighFen {
+        display: none;
+        justify-content: center;
+    }
+
+    .verticalHighFen {
+        height: 1.8rem;
+        color: white;
+        border: 1px solid white;
+        width: 0px;
+        border-radius: 2px;
+        display: block;
+    }
+
+    .footerTextDiv div p {
+        color: white;
+        margin-top: 0.5rem;
+        font-weight: 600;
+    }
+    .footerIconContent {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .footerIconContent div {
+        margin: 5px;
+    }
+
+    .footerIconContent div p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    .footerContainer {
+        background-color: black;
+        padding-left: 6rem;
+        padding-right: 6rem;
+        padding-top: 3rem;
+    }
+
+    .footerFirstContent {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footerNavContent a {
+        margin: 10px;
+        text-decoration: none;
+        color: white;
+        font-weight: 600;
+    }
+
+    .socialConnect i {
+        margin: 7px;
+    }
+
+    .footerTextDiv {
+        display: flex;
+    }
+
+    .footerTextDiv div {
+        margin: 5px;
+    }
+
+    .footerIcon {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.6rem;
+    }
+
+    .footerIcon:hover {
+        color: white;
+    }
+
+    .horizontalHighFen {
+        display: none;
+        justify-content: center;
+    }
+
+    .verticalHighFen {
+        height: 1.8rem;
+        color: white;
+        border: 1px solid white;
+        width: 0px;
+        border-radius: 2px;
+        display: block;
+    }
+
+    .footerTextDiv div p {
+        color: white;
+        margin-top: 0.5rem;
+        font-weight: 600;
+    }
+    .footerIconContent {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .footerIconContent div {
+        margin: 5px;
+    }
+
+    .footerIconContent div p {
+        font-size: 14px;
     }
 }
