@@ -9,6 +9,15 @@
     .navbar-brand{
         font-weight: 700;
     }
+    .profileDiv{
+        border: 1px solid black;
+        height: 200px;
+        width: 200px;
+        background-color: white;
+        position: absolute;
+        top: 8rem;
+        left: 1.5rem;
+    }
 }
 
 @media (min-width: 577px) and (max-width: 766px) {
@@ -60,5 +69,22 @@
     }
     .nav-link{
         font-weight: 600;
+    }
+    .profileDiv{
+        border: 1px solid black;
+        height: auto;
+        width: 150px;
+        background-color: transparent;
+        backdrop-filter: blur(5px);
+        position: absolute;
+        top: 3rem;
+        right: 4rem;
+        padding-bottom: 4px;
+        padding-top: 4px;
+        padding-right: 6px;
+        padding-left: 4px;
+    }
+    .profileDiv button{
+        margin: 2px;
     }
 }
