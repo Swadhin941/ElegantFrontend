@@ -9,11 +9,15 @@ import Register from './Components/Register/Register';
 import { useContext } from 'react';
 import { SharedData } from './Components/SharedData/SharedContext';
 import { Toaster } from "react-hot-toast";
+import PageNotFound from './Components/PageNotFound/PageNotFound';
+import ErrorPage from './Components/ErrorPage/ErrorPage';
+import Forbidden from './Components/Forbidden/Forbidden';
 
 function App() {
   const routers = createBrowserRouter([
     {
       path: "/",
+      errorElement: <ErrorPage></ErrorPage>,
       element: <Main></Main>,
       children: [
         { path: "/", element: <Home></Home> },
@@ -24,6 +28,16 @@ function App() {
           path: "/register", element: <Register></Register>
         }
       ]
+    },
+    {
+      path: "*",
+      errorElement: <ErrorPage></ErrorPage>,
+      element: <PageNotFound></PageNotFound>
+    },
+    {
+      path: "/forbidden",
+      errorElement: <ErrorPage></ErrorPage>,
+      element: <Forbidden></Forbidden>
     }
   ]);
   const { handleNavMiniWindow, navbarMiniWindow } = useContext(SharedData);
