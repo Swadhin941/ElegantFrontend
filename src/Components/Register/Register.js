@@ -11,7 +11,7 @@ const Register = () => {
     useTitle("3legant- Register");
     const { createAccount, user } = useContext(SharedData);
     const [showPassword, setShowPassword] = useState(false);
-    // console.log(process.env.REACT_APP_SERVER);
+    
     const [token]= useToken(user?.email);
     const navigate = useNavigate();
 
@@ -47,7 +47,7 @@ const Register = () => {
         }
         createAccount(email, password)
             .then(users => {
-                fetch(`http://localhost:5000/user`, {
+                fetch(`${serverUrl}/user`, {
                     method: "POST",
                     headers:{
                         "content-type": "application/json"

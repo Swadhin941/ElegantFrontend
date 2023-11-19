@@ -3,7 +3,7 @@ import "./TopBanner.css";
 
 const TopBanner = () => {
     return (
-        <div className='p-0 topBanner'>
+        <div className=' p-0 topBanner'>
             <div className='topBannerContent'>
                 <div className="topBannerImgDiv">
                     <img src="https://i.ibb.co/gmvQcYh/Paste-image-removebg-preview-1.png" alt="" className='img-fluid' />

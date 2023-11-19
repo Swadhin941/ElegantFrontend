@@ -1,0 +1,15 @@
+.profileImgDiv{
+    height: 80px;
+    width: auto;
+}
+.profileImgDiv img{
+    height: 100%;
+    width: auto;
+}
+.profileInfo{
+    padding: 20px 16px;
+    display: flex;
+}
+.profileInfo div{
+    margin: 5px;
+}

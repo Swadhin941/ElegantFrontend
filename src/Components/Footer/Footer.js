@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import "./Footer.css";
+import  { SharedData } from '../SharedData/SharedContext';
 
 const Footer = () => {
+    const { coverPhotoOptionIcon, handleCoverPhotoOption } = useContext(SharedData);
     const handleSocial= (data)=>{
         if(data==="instagram"){
             window.location.href= "https://www.instagram.com/swadhin_ghosh0013/";
@@ -15,8 +17,14 @@ const Footer = () => {
         }
     }
 
+    const handleCoverPhoto= ()=>{
+        if(coverPhotoOptionIcon){
+            handleCoverPhotoOption();
+        }
+    }
+
     return (
-        <div className='container-fluid footerContainer'>
+        <div className='container-fluid footerContainer' onClick={handleCoverPhoto}>
             <div className="row">
                 <div className="col-12 col-md-12 col-lg-12">
                     <div className='footerFirstContent'>

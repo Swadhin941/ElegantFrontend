@@ -12,6 +12,8 @@ import { Toaster } from "react-hot-toast";
 import PageNotFound from './Components/PageNotFound/PageNotFound';
 import ErrorPage from './Components/ErrorPage/ErrorPage';
 import Forbidden from './Components/Forbidden/Forbidden';
+import MyProfile from './Components/MyProfile/MyProfile';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 function App() {
   const routers = createBrowserRouter([
@@ -20,12 +22,18 @@ function App() {
       errorElement: <ErrorPage></ErrorPage>,
       element: <Main></Main>,
       children: [
-        { path: "/", element: <Home></Home> },
+        {
+          path: "/", element: <Home></Home>
+        },
         {
           path: "/login", element: <Login></Login>
         },
         {
           path: "/register", element: <Register></Register>
+        },
+        {
+          path: "/profile",
+          element: <PrivateRoute><MyProfile></MyProfile></PrivateRoute>
         }
       ]
     },
@@ -40,7 +48,7 @@ function App() {
       element: <Forbidden></Forbidden>
     }
   ]);
-  const { handleNavMiniWindow, navbarMiniWindow } = useContext(SharedData);
+  const { handleNavMiniWindow, navbarMiniWindow, coverPhotoOptionIcon, handleCoverPhotoOption } = useContext(SharedData);
   const handleNavMini = () => {
     if (navbarMiniWindow) {
       handleNavMiniWindow();

@@ -7,47 +7,53 @@ export const SharedData = createContext();
 const auth = getAuth(app);
 
 const SharedContext = ({ children }) => {
-    const [user, setUser]= useState(null);
-    const [loading, setLoading]= useState(true);
-    const [navbarMiniWindow, setNavbarMiniWindow]= useState(false);
+    const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [navbarMiniWindow, setNavbarMiniWindow] = useState(false);
+    const [coverPhotoOptionIcon, setCoverPhotoOptionIcon] = useState(false);
     const googleProvider = new GoogleAuthProvider();
 
-    const googleLogin = ()=>{
+    const googleLogin = () => {
         setLoading(true);
         return signInWithPopup(auth, googleProvider)
     }
 
-    const createAccount= (email, password)=>{
+    const createAccount = (email, password) => {
         setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
-    const Login= (email, password)=>{
+    const Login = (email, password) => {
         setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
     }
 
-    const Logout= ()=>{
+    const Logout = () => {
         setLoading(true);
         setNavbarMiniWindow(!navbarMiniWindow);
         localStorage.removeItem('token');
         return signOut(auth);
     }
 
-    const handleNavMiniWindow= ()=>{
+    const handleNavMiniWindow = () => {
         setNavbarMiniWindow(!navbarMiniWindow);
         return navbarMiniWindow;
     }
 
-    useEffect(()=>{
-        const check= onAuthStateChanged(auth,(currentUser)=>{
+    const handleCoverPhotoOption= ()=>{
+        setCoverPhotoOptionIcon(!coverPhotoOptionIcon);
+        return coverPhotoOptionIcon;
+    }
+
+    useEffect(() => {
+        const check = onAuthStateChanged(auth, (currentUser) => {
             setUser(currentUser);
             setLoading(false);
         })
-        return ()=>check();
+        return () => check();
     })
 
-    const authInfo = { googleLogin, Login, loading, user, createAccount, Logout, setLoading, setUser, handleNavMiniWindow, navbarMiniWindow };
+    const authInfo = { googleLogin, Login, loading, user, createAccount, Logout, setLoading, setUser, handleNavMiniWindow, navbarMiniWindow, handleCoverPhotoOption, coverPhotoOptionIcon };
     return (
         <div>
             <SharedData.Provider value={authInfo}>

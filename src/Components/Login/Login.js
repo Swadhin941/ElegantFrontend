@@ -5,6 +5,7 @@ import useTitle from '../CustomHook/useTitle/useTitle';
 import { SharedData } from '../SharedData/SharedContext';
 import useToken from '../CustomHook/useToken/useToken';
 import toast from 'react-hot-toast';
+import { serverUrl } from '../CustomHook/ServerHook/ServerHook';
 
 const Login = () => {
     useTitle("3legant- Login");
@@ -22,7 +23,7 @@ const Login = () => {
     const handleGoogle = () => {
         googleLogin()
             .then((users) => {
-                fetch(`http://localhost:5000/user`, {
+                fetch(`${serverUrl}/user`, {
                     method: "POST",
                     headers: {
                         "content-type": "application/json"

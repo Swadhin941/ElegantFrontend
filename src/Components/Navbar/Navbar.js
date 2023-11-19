@@ -1,12 +1,18 @@
 import React, { useContext } from 'react';
 import "./Navbar.css";
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { SharedData } from '../SharedData/SharedContext';
 
 const Navbar = () => {
-    const { handleNavMiniWindow, navbarMiniWindow, user, Logout } = useContext(SharedData);
+    const { handleNavMiniWindow, navbarMiniWindow, user, Logout, coverPhotoOptionIcon, handleCoverPhotoOption } = useContext(SharedData);
+    const navigate= useNavigate();
+    const handleCoverPhoto= ()=>{
+        if(coverPhotoOptionIcon){
+            handleCoverPhotoOption()
+        }
+    }
     return (
-        <nav className="navbar navbar-expand-lg navbarBackground">
+        <nav className="navbar navbar-expand-lg navbarBackground" onClick={handleCoverPhoto}>
             <div className="container-fluid navbarContainer">
                 <div>
                     <Link to={'/'} className='navbar-brand' style={{ fontWeight: "600" }}>3legant</Link>
@@ -21,14 +27,14 @@ const Navbar = () => {
                         </li>
                         <li className="nav-item">
                             {
-                                user ? <div className='mt-1' onClick={() => handleNavMiniWindow()} style={{ height: "30px", width: "30px" }}><img src={user?.photoURL} className='img-fluid rounded rounded-circle' alt={user?.displayName + "picture"} /></div> : <NavLink to={'/login'} className={'nav-link'} style={{ marginTop: "-0.23rem" }}><i className='bi bi-person-circle fs-4' ></i></NavLink>
+                                user ? <div className='mt-1' onClick={() => handleNavMiniWindow()} style={{ height: "30px", width: "30px" }}><img src={user?.photoURL} className='img-fluid rounded rounded-circle' alt={user?.displayName+" picture"} /></div> : <NavLink to={'/login'} className={'nav-link'} style={{ marginTop: "-0.23rem" }}><i className='bi bi-person-circle fs-4' ></i></NavLink>
                             }
 
                         </li>
                     </ul>
                     {
                         user && navbarMiniWindow && <div className='profileDiv'>
-                            <button className='btn w-100 border border-dark'>My Profile</button>
+                            <button className='btn w-100 border border-dark' onClick={()=>navigate('/profile')}>My Profile</button>
                             <button className='btn w-100 border border-dark'>My cart</button>
                             <button className='btn w-100 border border-dark' onClick={() => Logout()}>Logout</button>
                         </div>
