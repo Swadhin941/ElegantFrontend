@@ -4,11 +4,14 @@ import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { SharedData } from '../SharedData/SharedContext';
 
 const Navbar = () => {
-    const { handleNavMiniWindow, navbarMiniWindow, user, Logout, coverPhotoOptionIcon, handleCoverPhotoOption } = useContext(SharedData);
+    const { handleNavMiniWindow, navbarMiniWindow, user, Logout, coverPhotoOptionIcon, handleCoverPhotoOption, handleProfileImgOptionDiv, profileImgOptionDiv } = useContext(SharedData);
     const navigate= useNavigate();
     const handleCoverPhoto= ()=>{
         if(coverPhotoOptionIcon){
-            handleCoverPhotoOption()
+            handleCoverPhotoOption();
+        }
+        if(profileImgOptionDiv){
+            handleProfileImgOptionDiv();
         }
     }
     return (

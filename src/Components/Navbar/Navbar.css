@@ -11,12 +11,23 @@
     }
     .profileDiv{
         border: 1px solid black;
-        height: 200px;
+        padding-left: 4px;
+        padding-right: 4px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        height: auto;
         width: 200px;
-        background-color: white;
+        background-color: transparent;
         position: absolute;
         top: 8rem;
         left: 1.5rem;
+        backdrop-filter: blur(6px);
+    }
+    .profileDiv button{
+        margin-top: 2px;
+    }
+    .profileDiv button:hover{
+        background-color: white;
     }
 }
 

@@ -52,7 +52,7 @@ const Register = () => {
                     headers:{
                         "content-type": "application/json"
                     },
-                    body:JSON.stringify({fullName, email, role: form.accountType.value, emailStatus: false})
+                    body:JSON.stringify({fullName, email, role: form.accountType.value, emailStatus: false, photoURL: users?.user?.photoURL})
                 })
                     .then(res => res.json())
                     .then(data => {

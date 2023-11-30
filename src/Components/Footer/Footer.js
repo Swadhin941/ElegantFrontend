@@ -4,7 +4,7 @@ import "./Footer.css";
 import  { SharedData } from '../SharedData/SharedContext';
 
 const Footer = () => {
-    const { coverPhotoOptionIcon, handleCoverPhotoOption } = useContext(SharedData);
+    const { coverPhotoOptionIcon, handleCoverPhotoOption, handleProfileImgOptionDiv, profileImgOptionDiv } = useContext(SharedData);
     const handleSocial= (data)=>{
         if(data==="instagram"){
             window.location.href= "https://www.instagram.com/swadhin_ghosh0013/";
@@ -20,6 +20,9 @@ const Footer = () => {
     const handleCoverPhoto= ()=>{
         if(coverPhotoOptionIcon){
             handleCoverPhotoOption();
+        }
+        if(profileImgOptionDiv){
+            handleProfileImgOptionDiv();
         }
     }
 

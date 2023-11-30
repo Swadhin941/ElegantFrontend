@@ -55,7 +55,8 @@ function App() {
     }
   }
   return (
-    <div className='autoMargin shadow-lg' onClick={handleNavMini}>
+    <div className='autoMargin bg-custom' onClick={handleNavMini}>
+
       <RouterProvider router={routers}>
 
       </RouterProvider>
